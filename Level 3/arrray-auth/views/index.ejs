@@ -1,11 +1,26 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css"/>
+</head>
+<body class="container">
+<h1><%= title %></h1>
+<form action="/" method="post" name="auth" class="form-group-lg">
+    <label for="name">Name</label><br>
+    <input type="text" name="name" placeholder="Name" class="input-lg" required/><br>
+    <label for="surname">Surname</label><br>
+    <input type="text" name="surname" placeholder="Surname" class="input-lg" required/><br>
+    <label for="age">Age</label><br>
+    <input type="number" name="age" placeholder="Age" value="20" class="input-lg" required/><br>
+    <label for="email">Email</label><br>
+    <input type="email" name="email" placeholder="Email" class="input-lg" required/><br>
+    <label for="password">Password</label><br>
+    <input type="password" name="password" placeholder="Password" class="input-lg" required/><br>
+    <label for="confirm-password">Confirm Password</label><br>
+    <input type="password" name="confirm-password" placeholder="Confirm Password" class="input-lg" required/><br><br>
+    <button class="btn btn-lg">Submit</button>
+</form>
+</body>
 </html>
