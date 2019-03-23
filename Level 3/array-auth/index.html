@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+</head>
+<body class="container-fluid">
+<h1>Basic Form</h1>
+<form class="form-group-lg" name="form">
+    <label>Name</label>:
+    <br/>
+    <input class="input-lg" name="Name" placeholder="Enter Name" required type="text">
+    <br/>
+    <label>Surname</label>:
+    <br/>
+    <input class="input-lg" name="Surname" placeholder="Enter Surname" required type="text">
+    <br/>
+    <label>Age</label>:
+    <br/>
+    <input class="input-lg" name="Age" placeholder="Enter Age" required type="number">
+    <br/>
+    <label>Email</label>:
+    <br/>
+    <input class="input-lg" name="Email" placeholder="Enter Email" required type="email">
+    <br/>
+    <label>Password</label>:
+    <br/>
+    <input class="input-lg" name="Password" placeholder="Enter Password" required type="password">
+    <br/>
+    <label>Confirm Password</label>:
+    <br/>
+    <input class="input-lg" name="Confirm Password" placeholder="Enter Password" required type="password">
+    <br/>
+    <input class="btn btn-default btn-lg" onclick="validate_form()" type="button" value="Submit">
+</form>
+</body>
+<script>
+    function validate_form() {
+        let pass1 = document.forms["form"]["Password"].value;
+        let pass2 = document.forms["form"]["Confirm Password"].value;
+        let array;
+        let name = document.forms["form"]["Name"].value;
+        let surname = document.forms["form"]["Surname"].value;
+        let age = document.forms["form"]["Age"].value;
+        let email = document.forms["form"]["Email"].value;
+        if (pass1 === '') {
+            alert("Password required");
+        } else {
+            if (pass1 === pass2) {
+                alert("Success!");
+                array = [name, surname, age, email, pass1, pass2]
+            } else {
+                alert("Password not correct");
+            }
+        }
+    }
+</script>
+</html>
