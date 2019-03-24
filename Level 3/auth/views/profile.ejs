@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css"/>
+</head>
+<body class="container">
+<h1><%= title %></h1>
+<h2><strong>Name: </strong><%= user.name %></h2>
+<h2><strong>Surname: </strong><%= user.surname %></h2>
+<h2><strong>Age: </strong><%= user.age %></h2>
+<h2><strong>Email: </strong><%= user.email %></h2>
+<% if(error) { %>
+    <h2 style="text-align: center; border: thin solid black; padding: 0.3em;" class="label-danger"><%= error %></h2>
+<% } else if (message) { %>
+    <h2 style="text-align: center; border: thin solid black; padding: 0.3em;" class="label-success"><%= message %></h2>
+<% } %>
+<a href="/edit-profile" class="btn btn-lg btn-primary">Edit Profile Details</a><br><br>
+<a href="/logout" class="btn btn-lg btn-primary">Logout</a>
+</body>
+</html>

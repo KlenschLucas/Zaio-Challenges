@@ -6,3 +6,16 @@ body {
 a {
     color: #00B7FF;
 }
+
+.input-lg {
+    display: block;
+    width: 100%;
+}
+
+button {
+    width: 100%;
+}
+
+a {
+    width: 100%;
+}
