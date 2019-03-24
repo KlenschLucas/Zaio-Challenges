@@ -13,11 +13,6 @@
 <h2><strong>Email: </strong><%= user.email %></h2>
 <h2><strong>Degree: </strong><%= user.degree %></h2>
 <h2><strong>Favourite Course: </strong><%= user.fav %></h2>
-<% if(error) { %>
-    <h2 style="text-align: center; border: thin solid black; padding: 0.3em;" class="label-danger"><%= error %></h2>
-<% } else if (message) { %>
-    <h2 style="text-align: center; border: thin solid black; padding: 0.3em;" class="label-success"><%= message %></h2>
-<% } %>
 <a href="/edit-profile" class="btn btn-lg btn-primary">Edit Profile Details</a><br><br>
 <a href="/logout" class="btn btn-lg btn-primary">Logout</a>
 </body>

@@ -12,12 +12,6 @@
     <input type="email" name="email" placeholder="Email" class="input-lg" required/><br>
     <label for="password">Password</label><br>
     <input type="password" name="password" placeholder="Password" class="input-lg" required/><br>
-    <% if(error) { %>
-        <h2 style="text-align: center; border: thin solid black; padding: 0.3em;" class="label-danger"><%= error %></h2>
-    <% } else if (message) { %>
-        <h2 style="text-align: center; border: thin solid black; padding: 0.3em;"
-            class="label-success"><%= message %></h2>
-    <% } %>
     <button class="btn btn-lg btn-primary">Signin</button>
     <br><br>
     <a href="/signup" class="btn btn-lg btn-primary">Create New Account</a>
