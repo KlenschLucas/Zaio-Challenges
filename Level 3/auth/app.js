@@ -8,7 +8,6 @@ const bodyParser = require('body-parser');
 const routes = require('./routes/index');
 const users = require('./routes/users');
 const db = require('./db');
-const URL = `mongodb://${'zaio-profile-writer'}:${'qwerty123!@'}@ds139775.mlab.com:39775/zaio-profile`;
 
 const app = express();
 
