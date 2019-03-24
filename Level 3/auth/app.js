@@ -7,6 +7,8 @@ const bodyParser = require('body-parser');
 
 const routes = require('./routes/index');
 const users = require('./routes/users');
+const db = require('./db');
+const URL = `mongodb://${'zaio-profile-writer'}:${'qwerty123!@'}@ds139775.mlab.com:39775/zaio-profile`;
 
 const app = express();
 
@@ -30,7 +32,15 @@ app.use(function (req, res, next) {
     err.status = 404;
     next(err);
 });
-
+//// Connect to the db
+db.connect('mongodb://zaio-writer:qwerty123@ds139775.mlab.com:39775/zaio-profile', function (err) {
+    if (err) {
+        console.log('Unable to connect to Mongo.');
+        process.exit(1)
+    } else {
+        console.log('Mongo is up and running.');
+    }
+});
 /// error handlers
 
 // development error handler
