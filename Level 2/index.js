@@ -53,5 +53,5 @@ function FirstDuplicate(array) {
 let sequence = [1, 3, 1, 3, 1, 3];
 // Should log out 3
 console.log(arrayMode(sequence));
-// Should log out 3
+// Should log out 1
 console.log(FirstDuplicate(sequence));
